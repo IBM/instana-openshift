@@ -1,6 +1,6 @@
 # Integrate Instana with a Microservice Application on OpenShift
 
-In this code pattern, we will integrate [Instana](https://www.instana.com/) with a polyglot microservice travel application on OpenShift. Instana is a fully automated Application Performance Management (APM) solution designed specifically for the challenges of managing microservice and cloud-native applications. We will generate traffic to the application using [Puppeteer](https://developers.google.com/web/tools/puppeteer/) and analyze the traffic on the Instana dashboard. The travel application used in this code pattern is a part of the [Bee Travels](https://bee-travels.github.io/) project that focuses on some of the first version services of the application. The services included in this code pattern are:
+In this code pattern, we will integrate [Instana](https://www.instana.com/) with a polyglot microservice travel application on OpenShift. Instana is a fully automated Enterprise Observability solution, with infrastructure monitoring and Application Performance Management (APM), designed specifically for the challenges of managing microservice and cloud-native applications. We will generate traffic to the application using [Puppeteer](https://developers.google.com/web/tools/puppeteer/) and analyze the traffic on the Instana dashboard. The travel application used in this code pattern is a part of the [Bee Travels](https://bee-travels.github.io/) project that focuses on some of the first version services of the application. The services included in this code pattern are:
 * Destination v1 (Node.js)
 * Car Rental v1 (Node.js)
 * Hotel v1 (Python)
@@ -12,7 +12,7 @@ In this code pattern, we will integrate [Instana](https://www.instana.com/) with
 ![](img/architecture.png)
 
 1. The Puppeteer script generates traffic to the Bee Travels application running in the OpenShift cluster.
-2. The Instana code in each service of the Bee Travels application sends data about each respective service to the Instana Agent in the OpenShift cluster.
+2. The Instana code in each service of the Bee Travels application sends data about each respective service to the Instana Agent in the OpenShift cluster (one Instana Agent per cluster node).
 3. The Instana Agent sends that data to your account on Instana where you can analyze/monitor the Bee Travels microservices through the Instana dashboard.
 
 # Steps
@@ -48,7 +48,7 @@ Once you have access to Instana, open up the Instana dashboard. Press `Add Websi
 
 Copy the generated script and insert it into the `<head>` tag of [/src/services/ui/frontend/public/index.html](src/services/ui/frontend/public/index.html). This integrates Instana into the UI front end of the application. This will now allow you to analzye page loads, traffic, and more to the front end of the application.
 
-Instana is already integrated into the other services. Instana provides documentation for integrating Instana into [Node.js](https://www.instana.com/docs/ecosystem/node-js/configuration/) and [Python](https://www.instana.com/docs/ecosystem/python/configuration/) applications. Having Instana in backend services allows for telemetry and other information about calls made to a service to be sent to Instana. In addition, you can analyze individual trace calls to show how your services are communicating with one another. You can view how Instana is integrated in each Bee Travels service here by going to the following:
+Instana is already integrated into the services. To learn how to integrate Instana with your own services, a documentation is provided for integrating Instana into [Node.js](https://www.instana.com/docs/ecosystem/node-js/configuration/) and [Python](https://www.instana.com/docs/ecosystem/python/configuration/) applications, as well as many other technologies. Having Instana in backend services allows for distributed traces, telemetry and other information about calls made to a service to be sent to Instana. In addition, you can analyze individual trace calls to show how your services are communicating with one another. You can view how Instana is integrated in each Bee Travels service here by going to the following:
 
 **Destination Service**
 * Source code: [src/services/destination-v1/src/app.js](src/services/destination-v1/src/app.js) (lines 14-17)
