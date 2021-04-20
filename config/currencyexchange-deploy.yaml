@@ -58,8 +58,8 @@ spec:
               value: currencyexchange
             - name: INSTANA_AUTOPROFILE
               value: "true"
-            - name: INSTANA_DEBUG
-              value: "true"
+            - name: INSTANA_LOG_LEVEL
+              value: "warn"
           resources:
             limits:
               cpu: 100m
