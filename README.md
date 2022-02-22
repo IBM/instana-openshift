@@ -20,7 +20,7 @@ In this code pattern, we will integrate [Instana](https://www.instana.com/) with
 # Steps
 
 1. [Prerequisites](#1-prerequisites)
-2. [Fork the repo](#2-fork-the-repo)
+2. [Clone the repo](#2-clone-the-repo)
 3. [Integrate Instana](#3-integrate-instana)
 4. [Deploy to OpenShift](#4-deploy-to-openshift)
 5. [Generate Traffic and Analyze with Instana](#5-generate-traffic-and-analyze-with-instana)
@@ -34,13 +34,17 @@ In this code pattern, we will integrate [Instana](https://www.instana.com/) with
 * [NPM](https://www.npmjs.com/get-npm)
 * [Yarn](https://classic.yarnpkg.com/en/docs/install)
 * [Pupeteer](https://developers.google.com/web/tools/puppeteer/get-started)
-* [Access to Instana](https://www.instana.com/trial/)
+* [Access to Instana](https://www.instana.com/trial/): If you do not have Instana server setup already, you can use `free trial` of Instana to execute this code pattern.
 
-## 2. Fork the repo
+## 2. Clone the repo
 
-1. Scroll to the top of this repo and press the **Fork** button.
+Clone the repository using the following command.
 
-2. Select the account from the list that you would like to fork the repo to.
+```
+git clone https://github.com/IBM/instana-openshift.git
+```
+
+You need to make some changes in the cloned repo and run the script as explained in further steps.
 
 ## 3. Integrate Instana
 
