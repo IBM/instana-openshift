@@ -1,4 +1,8 @@
-# Integrate Instana with a Microservice Application on OpenShift
+# WARNING: This repository is no longer maintained
+
+> This repository will not be updated. The repository will be kept available in read-only mode.
+
+## Integrate Instana with a Microservice Application on OpenShift
 
 https://developer.ibm.com/patterns/integrating-instana-with-microservice-app-on-openshift/
 
